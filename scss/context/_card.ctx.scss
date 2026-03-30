@@ -1,0 +1,78 @@
+// ============================================
+// ScarX Context: Card (ctx)
+// ============================================
+
+.card[ctx],
+.card-modern[ctx],
+.card-glass[ctx],
+.card-flat[ctx],
+.card-hover[ctx] {
+    img {
+        width: 100%;
+        border-radius: $scar-radius-md;
+        margin-bottom: map-get($scar-spacers, 3);
+        object-fit: cover;
+
+        &:first-child {
+            margin-top: calc(-1 * map-get($scar-spacers, 4));
+            margin-left: calc(-1 * map-get($scar-spacers, 4));
+            margin-right: calc(-1 * map-get($scar-spacers, 4));
+            width: calc(100% + map-get($scar-spacers, 4) * 2);
+            border-radius: $scar-radius-lg $scar-radius-lg 0 0;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: $scar-font-weight-semibold;
+        color: var(--scar-text-color);
+        margin-bottom: map-get($scar-spacers, 2);
+    }
+
+    h1 {
+        font-size: $scar-font-size-2xl;
+    }
+
+    h2 {
+        font-size: $scar-font-size-xl;
+    }
+
+    h3 {
+        font-size: $scar-font-size-lg;
+    }
+
+    h4 {
+        font-size: $scar-font-size-md;
+    }
+
+    p {
+        color: var(--scar-text-muted);
+        font-size: $scar-font-size-sm;
+        line-height: $scar-line-height;
+        margin-bottom: map-get($scar-spacers, 3);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a:not(.btn):not([class*="btn-"]) {
+        color: $scar-primary;
+        font-weight: $scar-font-weight-medium;
+        font-size: $scar-font-size-sm;
+        @include scar-transition(color);
+
+        &:hover {
+            color: $scar-primary-dark;
+        }
+    }
+
+    small {
+        font-size: $scar-font-size-xs;
+        color: var(--scar-text-muted);
+    }
+}

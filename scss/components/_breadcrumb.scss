@@ -1,0 +1,42 @@
+// ============================================
+// ScarX Breadcrumb Component
+// ============================================
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem;
+    padding: map-get($scar-spacers, 2) 0;
+    font-size: $scar-font-size-sm;
+    list-style: none;
+    margin: 0;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    color: var(--scar-text-muted);
+
+    a {
+        color: var(--scar-text-muted);
+        @include scar-transition(color);
+        text-decoration: none;
+
+        &:hover {
+            color: $scar-primary;
+        }
+    }
+
+    &+.breadcrumb-item::before {
+        content: "/";
+        margin: 0 0.5rem;
+        color: var(--scar-text-muted);
+        opacity: 0.5;
+    }
+
+    &.active {
+        color: var(--scar-text-color);
+        font-weight: $scar-font-weight-medium;
+    }
+}

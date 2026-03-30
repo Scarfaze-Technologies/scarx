@@ -1,0 +1,122 @@
+// ============================================
+// ScarX Reset - Modern CSS Reset
+// ============================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--scar-font-family);
+  font-size: var(--scar-font-size-base);
+  line-height: var(--scar-line-height);
+  color: var(--scar-text-color);
+  background-color: var(--scar-bg-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+// Media defaults
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Form element inheritance
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+// Button reset
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+// Link reset
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// List reset
+ul,
+ol {
+  list-style: none;
+}
+
+// Table reset
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Remove default fieldset styles
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Typography reset
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  overflow-wrap: break-word;
+}
+
+p {
+  overflow-wrap: break-word;
+}
+
+// Remove default summary styles
+summary {
+  cursor: pointer;
+}
+
+// Prevent textarea resize issues
+textarea {
+  resize: vertical;
+}
+
+// Focus styles
+:focus-visible {
+  outline: 2px solid var(--scar-primary);
+  outline-offset: 2px;
+}
+
+// Hidden utility
+[hidden] {
+  display: none !important;
+}
+
+// Selection
+::selection {
+  background-color: var(--scar-primary);
+  color: #fff;
+}

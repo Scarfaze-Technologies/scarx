@@ -1,0 +1,54 @@
+// ============================================
+// ScarX Framework - Main Entry Point
+// By Scarfaze Company | https://scarfaze.com
+// Developer: Zawiyar Awan
+// License: MIT
+// ============================================
+
+// ---- Base ----
+@import 'base/variables';
+@import 'base/config';
+@import 'base/reset';
+@import 'base/typography';
+
+// ---- Components ----
+@import 'components/container';
+@import 'components/grid';
+@import 'components/button';
+@import 'components/card';
+@import 'components/navbar';
+@import 'components/modal';
+@import 'components/dropdown';
+@import 'components/form';
+@import 'components/table';
+@import 'components/badge';
+@import 'components/alert';
+@import 'components/breadcrumb';
+@import 'components/pagination';
+@import 'components/avatar';
+@import 'components/tooltip';
+@import 'components/tabs';
+@import 'components/accordion';
+@import 'components/progress';
+@import 'components/spinner';
+@import 'components/hero';
+@import 'components/footer';
+
+// ---- Utilities (ui attribute) ----
+@import 'utilities/spacing';
+@import 'utilities/sizes';
+@import 'utilities/text';
+@import 'utilities/display';
+@import 'utilities/colors';
+@import 'utilities/shadows';
+@import 'utilities/borders';
+@import 'utilities/position';
+@import 'utilities/opacity';
+@import 'utilities/responsive';
+
+// ---- Context System (ctx attribute) ----
+@import 'context/navbar.ctx';
+@import 'context/card.ctx';
+@import 'context/form.ctx';
+@import 'context/footer.ctx';
+@import 'context/hero.ctx';

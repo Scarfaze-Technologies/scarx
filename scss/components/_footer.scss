@@ -1,0 +1,122 @@
+// ============================================
+// ScarX Footer Component
+// ============================================
+
+.footer {
+    padding: map-get($scar-spacers, 6) map-get($scar-spacers, 4);
+    background: $scar-gray-100;
+    border-top: 1px solid var(--scar-border-color);
+
+    [data-theme="dark"] & {
+        background: $scar-dark-surface;
+        border-color: $scar-dark-border;
+    }
+}
+
+.footer-dark {
+    @extend .footer;
+    background: $scar-dark;
+    color: $scar-white;
+    border-top: none;
+}
+
+.footer-modern {
+    @extend .footer;
+    background: $scar-gray-900;
+    color: $scar-gray-300;
+    border-top: none;
+}
+
+// Footer sections
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: map-get($scar-spacers, 5);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+
+    h3,
+    h4,
+    h5 {
+        font-size: $scar-font-size-base;
+        font-weight: $scar-font-weight-semibold;
+        margin-bottom: map-get($scar-spacers, 3);
+
+        .footer-dark &,
+        .footer-modern & {
+            color: $scar-white;
+        }
+    }
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        margin-bottom: map-get($scar-spacers, 2);
+    }
+
+    a {
+        color: var(--scar-text-muted);
+        font-size: $scar-font-size-sm;
+        @include scar-transition(color);
+        text-decoration: none;
+
+        &:hover {
+            color: $scar-primary;
+        }
+
+        .footer-dark &,
+        .footer-modern & {
+            color: $scar-gray-400;
+
+            &:hover {
+                color: $scar-white;
+            }
+        }
+    }
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: map-get($scar-spacers, 4);
+    margin-top: map-get($scar-spacers, 4);
+    border-top: 1px solid var(--scar-border-color);
+    font-size: $scar-font-size-sm;
+    color: var(--scar-text-muted);
+
+    .footer-dark &,
+    .footer-modern & {
+        border-color: rgba($scar-white, 0.1);
+        color: $scar-gray-500;
+    }
+}
+
+.footer-social {
+    display: flex;
+    gap: map-get($scar-spacers, 2);
+    margin-top: map-get($scar-spacers, 3);
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: $scar-radius-full;
+        background: rgba($scar-primary, 0.1);
+        color: $scar-primary;
+        @include scar-transition(all);
+
+        &:hover {
+            background: $scar-primary;
+            color: $scar-white;
+            transform: translateY(-2px);
+        }
+    }
+}

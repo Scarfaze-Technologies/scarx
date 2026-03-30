@@ -1,0 +1,153 @@
+// ============================================
+// ScarX Position Utilities (ui attribute)
+// ============================================
+
+// Position
+[ui~="pos-relative"] {
+    position: relative !important;
+}
+
+[ui~="pos-absolute"] {
+    position: absolute !important;
+}
+
+[ui~="pos-fixed"] {
+    position: fixed !important;
+}
+
+[ui~="pos-sticky"] {
+    position: sticky !important;
+    top: 0;
+}
+
+[ui~="pos-static"] {
+    position: static !important;
+}
+
+// Inset
+[ui~="inset-0"] {
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+}
+
+[ui~="top-0"] {
+    top: 0 !important;
+}
+
+[ui~="right-0"] {
+    right: 0 !important;
+}
+
+[ui~="bottom-0"] {
+    bottom: 0 !important;
+}
+
+[ui~="left-0"] {
+    left: 0 !important;
+}
+
+[ui~="top-50"] {
+    top: 50% !important;
+}
+
+[ui~="left-50"] {
+    left: 50% !important;
+}
+
+// Center absolute
+[ui~="center-x"] {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+[ui~="center-y"] {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+[ui~="center-xy"] {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+// Z-Index
+@for $i from 0 through 5 {
+    [ui~="z-#{$i}"] {
+        z-index: $i * 10 !important;
+    }
+}
+
+[ui~="z-auto"] {
+    z-index: auto !important;
+}
+
+[ui~="z-dropdown"] {
+    z-index: map-get($scar-z-indexes, "dropdown") !important;
+}
+
+[ui~="z-sticky"] {
+    z-index: map-get($scar-z-indexes, "sticky") !important;
+}
+
+[ui~="z-fixed"] {
+    z-index: map-get($scar-z-indexes, "fixed") !important;
+}
+
+[ui~="z-modal"] {
+    z-index: map-get($scar-z-indexes, "modal") !important;
+}
+
+[ui~="z-tooltip"] {
+    z-index: map-get($scar-z-indexes, "tooltip") !important;
+}
+
+// Overflow
+[ui~="overflow-hidden"] {
+    overflow: hidden !important;
+}
+
+[ui~="overflow-auto"] {
+    overflow: auto !important;
+}
+
+[ui~="overflow-scroll"] {
+    overflow: scroll !important;
+}
+
+[ui~="overflow-visible"] {
+    overflow: visible !important;
+}
+
+[ui~="overflow-x-auto"] {
+    overflow-x: auto !important;
+}
+
+[ui~="overflow-y-auto"] {
+    overflow-y: auto !important;
+}
+
+[ui~="overflow-x-hidden"] {
+    overflow-x: hidden !important;
+}
+
+// Float
+[ui~="float-left"] {
+    float: left !important;
+}
+
+[ui~="float-right"] {
+    float: right !important;
+}
+
+[ui~="float-none"] {
+    float: none !important;
+}
+
+[ui~="clearfix"]::after {
+    content: "";
+    display: table;
+    clear: both;
+}

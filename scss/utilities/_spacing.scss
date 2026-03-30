@@ -1,0 +1,91 @@
+// ============================================
+// ScarX Spacing Utilities (ui attribute)
+// ============================================
+
+// Padding
+@each $key, $val in $scar-spacers {
+    [ui~="p-#{$key}"] {
+        padding: $val !important;
+    }
+
+    [ui~="pt-#{$key}"] {
+        padding-top: $val !important;
+    }
+
+    [ui~="pb-#{$key}"] {
+        padding-bottom: $val !important;
+    }
+
+    [ui~="pl-#{$key}"] {
+        padding-left: $val !important;
+    }
+
+    [ui~="pr-#{$key}"] {
+        padding-right: $val !important;
+    }
+
+    [ui~="px-#{$key}"] {
+        padding-left: $val !important;
+        padding-right: $val !important;
+    }
+
+    [ui~="py-#{$key}"] {
+        padding-top: $val !important;
+        padding-bottom: $val !important;
+    }
+}
+
+// Margin
+@each $key, $val in $scar-spacers {
+    [ui~="m-#{$key}"] {
+        margin: $val !important;
+    }
+
+    [ui~="mt-#{$key}"] {
+        margin-top: $val !important;
+    }
+
+    [ui~="mb-#{$key}"] {
+        margin-bottom: $val !important;
+    }
+
+    [ui~="ml-#{$key}"] {
+        margin-left: $val !important;
+    }
+
+    [ui~="mr-#{$key}"] {
+        margin-right: $val !important;
+    }
+
+    [ui~="mx-#{$key}"] {
+        margin-left: $val !important;
+        margin-right: $val !important;
+    }
+
+    [ui~="my-#{$key}"] {
+        margin-top: $val !important;
+        margin-bottom: $val !important;
+    }
+}
+
+// Auto margin
+[ui~="mx-auto"] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+[ui~="ml-auto"] {
+    margin-left: auto !important;
+}
+
+[ui~="mr-auto"] {
+    margin-right: auto !important;
+}
+
+[ui~="mt-auto"] {
+    margin-top: auto !important;
+}
+
+[ui~="mb-auto"] {
+    margin-bottom: auto !important;
+}

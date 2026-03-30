@@ -1,0 +1,135 @@
+// ============================================
+// ScarX Opacity & Visibility Utilities (ui attribute)
+// ============================================
+
+// Opacity
+[ui~="opacity-0"] {
+    opacity: 0 !important;
+}
+
+[ui~="opacity-25"] {
+    opacity: 0.25 !important;
+}
+
+[ui~="opacity-50"] {
+    opacity: 0.5 !important;
+}
+
+[ui~="opacity-75"] {
+    opacity: 0.75 !important;
+}
+
+[ui~="opacity-100"] {
+    opacity: 1 !important;
+}
+
+// Visibility
+[ui~="visible"] {
+    visibility: visible !important;
+}
+
+[ui~="invisible"] {
+    visibility: hidden !important;
+}
+
+// Pointer events
+[ui~="pointer-none"] {
+    pointer-events: none !important;
+}
+
+[ui~="pointer-auto"] {
+    pointer-events: auto !important;
+}
+
+// Cursor
+[ui~="cursor-pointer"] {
+    cursor: pointer !important;
+}
+
+[ui~="cursor-default"] {
+    cursor: default !important;
+}
+
+[ui~="cursor-not-allowed"] {
+    cursor: not-allowed !important;
+}
+
+[ui~="cursor-grab"] {
+    cursor: grab !important;
+}
+
+[ui~="cursor-text"] {
+    cursor: text !important;
+}
+
+// User select
+[ui~="select-none"] {
+    user-select: none !important;
+}
+
+[ui~="select-all"] {
+    user-select: all !important;
+}
+
+[ui~="select-auto"] {
+    user-select: auto !important;
+}
+
+// Transitions
+[ui~="transition"] {
+    transition: all var(--scar-transition-base) !important;
+}
+
+[ui~="transition-fast"] {
+    transition: all var(--scar-transition-fast) !important;
+}
+
+[ui~="transition-slow"] {
+    transition: all var(--scar-transition-slow) !important;
+}
+
+[ui~="transition-none"] {
+    transition: none !important;
+}
+
+// Transform
+[ui~="rotate-45"] {
+    transform: rotate(45deg) !important;
+}
+
+[ui~="rotate-90"] {
+    transform: rotate(90deg) !important;
+}
+
+[ui~="rotate-180"] {
+    transform: rotate(180deg) !important;
+}
+
+[ui~="scale-95"] {
+    transform: scale(0.95) !important;
+}
+
+[ui~="scale-100"] {
+    transform: scale(1) !important;
+}
+
+[ui~="scale-105"] {
+    transform: scale(1.05) !important;
+}
+
+[ui~="scale-110"] {
+    transform: scale(1.1) !important;
+}
+
+// Screen reader only
+[ui~="sr-only"] {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}

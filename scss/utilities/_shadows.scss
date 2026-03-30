@@ -1,0 +1,35 @@
+// ============================================
+// ScarX Shadow Utilities (ui attribute)
+// ============================================
+
+@each $name, $shadow in $scar-shadows {
+    [ui~="shadow-#{$name}"] {
+        box-shadow: $shadow !important;
+    }
+}
+
+// Colored shadows
+[ui~="shadow-primary"] {
+    box-shadow: 0 8px 30px rgba($scar-primary, 0.3) !important;
+}
+
+[ui~="shadow-secondary"] {
+    box-shadow: 0 8px 30px rgba($scar-secondary, 0.3) !important;
+}
+
+[ui~="shadow-success"] {
+    box-shadow: 0 8px 30px rgba($scar-success, 0.3) !important;
+}
+
+[ui~="shadow-danger"] {
+    box-shadow: 0 8px 30px rgba($scar-danger, 0.3) !important;
+}
+
+// Glow effects
+[ui~="glow-primary"] {
+    box-shadow: 0 0 20px rgba($scar-primary, 0.4), 0 0 60px rgba($scar-primary, 0.15) !important;
+}
+
+[ui~="glow-secondary"] {
+    box-shadow: 0 0 20px rgba($scar-secondary, 0.4), 0 0 60px rgba($scar-secondary, 0.15) !important;
+}

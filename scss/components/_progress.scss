@@ -1,0 +1,86 @@
+// ============================================
+// ScarX Progress Component
+// ============================================
+
+.progress {
+    width: 100%;
+    height: 8px;
+    background: $scar-gray-200;
+    border-radius: $scar-radius-full;
+    overflow: hidden;
+
+    [data-theme="dark"] & {
+        background: $scar-dark-border;
+    }
+}
+
+.progress-bar {
+    height: 100%;
+    background: $scar-primary;
+    border-radius: $scar-radius-full;
+    @include scar-transition(width, $scar-transition-slow);
+    position: relative;
+}
+
+// Size variants
+.progress-sm {
+    height: 4px;
+}
+
+.progress-lg {
+    height: 14px;
+}
+
+// Color variants
+@each $name, $color in $scar-colors {
+    .progress-#{$name} .progress-bar {
+        background: $color;
+    }
+}
+
+// Gradient
+.progress-gradient .progress-bar {
+    background: linear-gradient(90deg, $scar-primary, $scar-secondary);
+}
+
+// Striped
+.progress-striped .progress-bar {
+    background-image: linear-gradient(45deg,
+            rgba(255, 255, 255, 0.15) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.15) 75%,
+            transparent 75%,
+            transparent);
+    background-size: 1rem 1rem;
+}
+
+// Animated
+.progress-animated .progress-bar {
+    animation: scarProgressStripe 1s linear infinite;
+}
+
+@keyframes scarProgressStripe {
+    0% {
+        background-position: 1rem 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+// With label
+.progress-labeled {
+    height: 20px;
+
+    .progress-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $scar-font-size-xs;
+        font-weight: $scar-font-weight-semibold;
+        color: $scar-white;
+    }
+}

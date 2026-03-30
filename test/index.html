@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScarX Framework - Component Showcase</title>
+    <link rel="stylesheet" href="../dist/scar.css">
+    <style>
+        .showcase-section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--scar-border-color);
+        }
+        .showcase-section h2 {
+            margin-bottom: 1.5rem;
+            color: var(--scar-primary);
+        }
+        .showcase-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .demo-box {
+            padding: 2rem;
+            background: var(--scar-surface-color);
+            border: 1px solid var(--scar-border-color);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar-modern navbar-sticky" ctx>
+    <a href="#" class="navbar-brand">⚡ ScarX</a>
+    <ul>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#cards">Cards</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#tables">Tables</a></li>
+        <li><a href="#components">Components</a></li>
+    </ul>
+    <div class="navbar-actions">
+        <button class="btn-outline btn-sm" data-scar-theme-toggle>🌙 Theme</button>
+    </div>
+    <div class="navbar-toggle">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<div class="hero-gradient" ctx>
+    <h1>ScarX Framework</h1>
+    <p>A modern, scalable, developer-friendly CSS framework by Scarfaze</p>
+    <div class="hero-cta">
+        <button class="btn-primary btn-lg">Get Started</button>
+        <button class="btn-outline btn-lg" ui="border-white text-white">Documentation</button>
+    </div>
+</div>
+
+<div class="container" ui="py-5">
+
+    <!-- ===== BUTTONS ===== -->
+    <section class="showcase-section" id="buttons">
+        <h2>🔘 Buttons</h2>
+        <div class="showcase-grid" ui="mb-4">
+            <button class="btn-primary">Primary</button>
+            <button class="btn-secondary">Secondary</button>
+            <button class="btn-success">Success</button>
+            <button class="btn-danger">Danger</button>
+            <button class="btn-warning">Warning</button>
+            <button class="btn-info">Info</button>
+            <button class="btn-dark">Dark</button>
+            <button class="btn-light">Light</button>
+        </div>
+        <h5>Outline Buttons</h5>
+        <div class="showcase-grid" ui="mb-4">
+            <button class="btn-outline">Outline</button>
+            <button class="btn-outline-primary">Primary</button>
+            <button class="btn-outline-secondary">Secondary</button>
+            <button class="btn-outline-success">Success</button>
+            <button class="btn-outline-danger">Danger</button>
+        </div>
+        <h5>Special Buttons</h5>
+        <div class="showcase-grid" ui="mb-4">
+            <button class="btn-ghost">Ghost</button>
+            <button class="btn-gradient">Gradient</button>
+            <button class="btn-primary btn-sm">Small</button>
+            <button class="btn-primary">Default</button>
+            <button class="btn-primary btn-lg">Large</button>
+        </div>
+        <h5>Button Group</h5>
+        <div class="btn-group">
+            <button class="btn-primary">Left</button>
+            <button class="btn-primary">Center</button>
+            <button class="btn-primary">Right</button>
+        </div>
+    </section>
+
+    <!-- ===== CARDS ===== -->
+    <section class="showcase-section" id="cards">
+        <h2>🃏 Cards</h2>
+        <div class="card-group">
+            <div class="card" ctx>
+                <h3>Default Card</h3>
+                <p>This is a basic card component with context auto-styling.</p>
+                <a href="#">Learn more →</a>
+            </div>
+            <div class="card-modern" ctx>
+                <h3>Modern Card</h3>
+                <p>With shadow and hover lift effect.</p>
+                <a href="#">Learn more →</a>
+            </div>
+            <div class="card-hover" ui="bg-primary-soft">
+                <div class="card-text">Hover Card</div>
+                <div class="card-summary">Hover me for the lift effect!</div>
+            </div>
+        </div>
+        <h5 ui="mt-4 mb-3">Card with UI Customization</h5>
+        <div class="card" ui="p-5 shadow-lg rounded-xl bg-gradient-primary text-white w-400">
+            <div class="card-text" ui="text-2xl font-bold">Customized Card</div>
+            <div class="card-summary" ui="opacity-75">Using ui attribute for deep control</div>
+        </div>
+    </section>
+
+    <!-- ===== FORMS ===== -->
+    <section class="showcase-section" id="forms">
+        <h2>📝 Forms</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Manual Form Classes</h5>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" placeholder="••••••••">
+                    <span class="form-help">Must be at least 8 characters</span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Select</label>
+                    <select class="form-select">
+                        <option>Choose option...</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-checkbox">
+                        <input type="checkbox" checked> Remember me
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="form-switch">
+                        <input type="checkbox" checked>
+                        <span>Enable notifications</span>
+                    </label>
+                </div>
+                <button class="btn-primary">Submit</button>
+            </div>
+            <div class="col-md-6">
+                <h5>Context Form (Auto-styled)</h5>
+                <form ctx>
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe">
+                    <label>Message</label>
+                    <textarea placeholder="Write your message..."></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TABLES ===== -->
+    <section class="showcase-section" id="tables">
+        <h2>📊 Tables</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Zawiyar Awan</td>
+                        <td>zawiyar@scarfaze.com</td>
+                        <td>Admin</td>
+                        <td><span class="badge-success badge-pill">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>Editor</td>
+                        <td><span class="badge-warning badge-pill">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Jane Smith</td>
+                        <td>jane@example.com</td>
+                        <td>Viewer</td>
+                        <td><span class="badge-danger badge-pill">Inactive</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ===== COMPONENTS ===== -->
+    <section class="showcase-section" id="components">
+        <h2>🧩 Components</h2>
+
+        <!-- Badges -->
+        <h5>Badges</h5>
+        <div class="showcase-grid" ui="mb-4">
+            <span class="badge-primary">Primary</span>
+            <span class="badge-secondary">Secondary</span>
+            <span class="badge-success">Success</span>
+            <span class="badge-danger">Danger</span>
+            <span class="badge-warning">Warning</span>
+            <span class="badge-primary badge-pill">Pill</span>
+            <span class="badge-success badge-dot">Online</span>
+        </div>
+
+        <!-- Alerts -->
+        <h5>Alerts</h5>
+        <div class="alert alert-success alert-dismissable" ui="mb-3">
+            <div>
+                <div class="alert-title">Success!</div>
+                <p>Your changes have been saved.</p>
+            </div>
+            <button class="alert-close">✕</button>
+        </div>
+        <div class="alert alert-danger alert-dismissable" ui="mb-3">
+            <div>
+                <div class="alert-title">Error!</div>
+                <p>Something went wrong.</p>
+            </div>
+            <button class="alert-close">✕</button>
+        </div>
+        <div class="alert alert-warning" ui="mb-3">
+            <p>⚠️ This is a warning alert.</p>
+        </div>
+        <div class="alert alert-info" ui="mb-4">
+            <p>ℹ️ This is an info alert.</p>
+        </div>
+
+        <!-- Breadcrumbs -->
+        <h5>Breadcrumbs</h5>
+        <ul class="breadcrumb" ui="mb-4">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Products</a></li>
+            <li class="breadcrumb-item active">Details</li>
+        </ul>
+
+        <!-- Progress -->
+        <h5>Progress Bars</h5>
+        <div ui="mb-3">
+            <div class="progress" ui="mb-2">
+                <div class="progress-bar" style="width: 75%"></div>
+            </div>
+            <div class="progress progress-success" ui="mb-2">
+                <div class="progress-bar" style="width: 90%"></div>
+            </div>
+            <div class="progress progress-gradient" ui="mb-2">
+                <div class="progress-bar" style="width: 60%"></div>
+            </div>
+            <div class="progress progress-striped progress-animated progress-danger" ui="mb-4">
+                <div class="progress-bar" style="width: 45%"></div>
+            </div>
+        </div>
+
+        <!-- Spinners -->
+        <h5>Spinners</h5>
+        <div class="showcase-grid" ui="mb-4 items-center">
+            <div class="spinner spinner-sm"></div>
+            <div class="spinner"></div>
+            <div class="spinner spinner-lg spinner-secondary"></div>
+            <div class="spinner-dots">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="spinner spinner-pulse"></div>
+        </div>
+
+        <!-- Avatars -->
+        <h5>Avatars</h5>
+        <div class="showcase-grid" ui="mb-4 items-center">
+            <div class="avatar avatar-sm">ZA</div>
+            <div class="avatar">JD</div>
+            <div class="avatar avatar-lg avatar-status">JS</div>
+            <div class="avatar avatar-xl">👤</div>
+        </div>
+        <div class="avatar-group" ui="mb-4">
+            <div class="avatar" ui="bg-primary text-white">A</div>
+            <div class="avatar" ui="bg-secondary text-white">B</div>
+            <div class="avatar" ui="bg-success text-white">C</div>
+            <div class="avatar" ui="bg-danger text-white">D</div>
+        </div>
+
+        <!-- Tooltips -->
+        <h5>Tooltips</h5>
+        <div class="showcase-grid" ui="mb-4">
+            <button class="btn-primary tooltip" data-tooltip="I'm on top!">Top</button>
+            <button class="btn-secondary tooltip-bottom" data-tooltip="I'm on bottom!">Bottom</button>
+            <button class="btn-success tooltip-left" data-tooltip="I'm on left!">Left</button>
+            <button class="btn-danger tooltip-right" data-tooltip="I'm on right!">Right</button>
+        </div>
+
+        <!-- Pagination -->
+        <h5>Pagination</h5>
+        <ul class="pagination" ui="mb-4">
+            <li class="pagination-item"><a href="#">«</a></li>
+            <li class="pagination-item"><a href="#">1</a></li>
+            <li class="pagination-item active"><a href="#">2</a></li>
+            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item"><a href="#">»</a></li>
+        </ul>
+    </section>
+
+    <!-- ===== TABS ===== -->
+    <section class="showcase-section">
+        <h2>📑 Tabs</h2>
+        <div class="tabs">
+            <button class="tabs-item active" data-scar-tab="tabContent1">Overview</button>
+            <button class="tabs-item" data-scar-tab="tabContent2">Features</button>
+            <button class="tabs-item" data-scar-tab="tabContent3">Pricing</button>
+        </div>
+        <div class="tabs-content">
+            <div class="tabs-pane active" id="tabContent1">
+                <div ui="p-4">
+                    <h4>Overview</h4>
+                    <p>ScarX is a production-ready CSS framework with 3 core layers.</p>
+                </div>
+            </div>
+            <div class="tabs-pane" id="tabContent2">
+                <div ui="p-4">
+                    <h4>Features</h4>
+                    <p>21 components, full utility system, context-based styling, JS interactivity.</p>
+                </div>
+            </div>
+            <div class="tabs-pane" id="tabContent3">
+                <div ui="p-4">
+                    <h4>Pricing</h4>
+                    <p>Free and open source. MIT License.</p>
+                </div>
+            </div>
+        </div>
+
+        <h5 ui="mt-4">Pill Tabs</h5>
+        <div class="tabs tabs-pills">
+            <button class="tabs-item active">All</button>
+            <button class="tabs-item">CSS</button>
+            <button class="tabs-item">JS</button>
+        </div>
+    </section>
+
+    <!-- ===== ACCORDION ===== -->
+    <section class="showcase-section">
+        <h2>🪗 Accordion</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">What is ScarX?</button>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        ScarX is a modern, scalable, developer-friendly CSS framework by Scarfaze. It uses 3 core layers: class (components), ui (utilities), and ctx (context-based styling).
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">How to customize?</button>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        Override SCSS variables in <code>scss/base/_variables.scss</code> and recompile with <code>npm run build:all</code>.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Is it free?</button>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        Yes! ScarX is open source under the MIT License.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODAL ===== -->
+    <section class="showcase-section">
+        <h2>💬 Modal & Dropdown</h2>
+        <div class="showcase-grid">
+            <button class="btn-primary" data-scar-modal="demoModal">Open Modal</button>
+
+            <div class="dropdown">
+                <button class="btn-secondary dropdown-toggle">Dropdown Menu</button>
+                <div class="dropdown-menu">
+                    <div class="dropdown-header">Options</div>
+                    <a class="dropdown-item" href="#">Edit</a>
+                    <a class="dropdown-item" href="#">Duplicate</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" ui="text-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== UI UTILITIES ===== -->
+    <section class="showcase-section">
+        <h2>🎨 UI Attribute System</h2>
+        <div ui="d-flex flex-wrap gap-3 mb-4">
+            <div ui="p-4 bg-primary text-white rounded-lg shadow-primary w-200 text-center">bg-primary</div>
+            <div ui="p-4 bg-secondary text-white rounded-lg shadow-secondary w-200 text-center">bg-secondary</div>
+            <div ui="p-4 bg-success text-white rounded-lg shadow-success w-200 text-center">bg-success</div>
+            <div ui="p-4 bg-danger text-white rounded-lg shadow-danger w-200 text-center">bg-danger</div>
+        </div>
+        <div ui="d-flex flex-wrap gap-3 mb-4">
+            <div ui="p-4 bg-gradient-sunset text-white rounded-xl w-200 text-center">Sunset</div>
+            <div ui="p-4 bg-gradient-ocean text-white rounded-xl w-200 text-center">Ocean</div>
+            <div ui="p-4 bg-gradient-primary text-white rounded-xl w-200 text-center">Primary</div>
+            <div ui="p-4 bg-gradient-dark text-white rounded-xl w-200 text-center">Dark</div>
+        </div>
+        <h5>Shadows & Glows</h5>
+        <div ui="d-flex flex-wrap gap-4 mb-4">
+            <div ui="p-4 bg-surface rounded-lg shadow-sm w-150 text-center text-sm">shadow-sm</div>
+            <div ui="p-4 bg-surface rounded-lg shadow-md w-150 text-center text-sm">shadow-md</div>
+            <div ui="p-4 bg-surface rounded-lg shadow-lg w-150 text-center text-sm">shadow-lg</div>
+            <div ui="p-4 bg-surface rounded-lg shadow-xl w-150 text-center text-sm">shadow-xl</div>
+        </div>
+        <div ui="d-flex flex-wrap gap-4 mb-4">
+            <div ui="p-4 bg-primary text-white rounded-lg glow-primary w-200 text-center">glow-primary</div>
+            <div ui="p-4 bg-secondary text-white rounded-lg glow-secondary w-200 text-center">glow-secondary</div>
+        </div>
+        <h5>Responsive Grid (ui)</h5>
+        <div ui="grid-cols-1 md:grid-cols-3 gap-3">
+            <div ui="p-4 bg-primary-soft rounded-md text-center">Col 1</div>
+            <div ui="p-4 bg-secondary-soft rounded-md text-center">Col 2</div>
+            <div ui="p-4 bg-success-soft rounded-md text-center">Col 3</div>
+        </div>
+    </section>
+
+    <!-- ===== GRID ===== -->
+    <section class="showcase-section">
+        <h2>📐 Grid System</h2>
+        <div class="row row-gap-3">
+            <div class="col-12"><div class="demo-box" ui="text-center text-sm">col-12</div></div>
+            <div class="col-6"><div class="demo-box" ui="text-center text-sm">col-6</div></div>
+            <div class="col-6"><div class="demo-box" ui="text-center text-sm">col-6</div></div>
+            <div class="col-4"><div class="demo-box" ui="text-center text-sm">col-4</div></div>
+            <div class="col-4"><div class="demo-box" ui="text-center text-sm">col-4</div></div>
+            <div class="col-4"><div class="demo-box" ui="text-center text-sm">col-4</div></div>
+            <div class="col-3"><div class="demo-box" ui="text-center text-sm">col-3</div></div>
+            <div class="col-3"><div class="demo-box" ui="text-center text-sm">col-3</div></div>
+            <div class="col-3"><div class="demo-box" ui="text-center text-sm">col-3</div></div>
+            <div class="col-3"><div class="demo-box" ui="text-center text-sm">col-3</div></div>
+        </div>
+    </section>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer-dark" ctx>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>ScarX</h4>
+                <p>A modern CSS framework by Scarfaze. Default simple, customization powerful, code always clean.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Components</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="https://scarfaze.com">Scarfaze.com</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            © 2026 ScarX by Scarfaze. All rights reserved. Developer: Zawiyar Awan
+        </div>
+    </div>
+</footer>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="demoModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h3>ScarX Modal</h3>
+            <button class="modal-close">✕</button>
+        </div>
+        <div class="modal-body">
+            <p>This is a ScarX modal dialog. It supports keyboard (Escape), overlay click, and button close.</p>
+            <p ui="text-muted text-sm">Built with pure CSS animations and minimal JavaScript.</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-ghost" data-scar-modal-close>Cancel</button>
+            <button class="btn-primary" data-scar-modal-close>Confirm</button>
+        </div>
+    </div>
+</div>
+
+<script src="../js/scar.js"></script>
+</body>
+</html>

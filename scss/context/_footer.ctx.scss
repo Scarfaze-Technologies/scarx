@@ -1,0 +1,64 @@
+// ============================================
+// ScarX Context: Footer (ctx)
+// ============================================
+
+.footer[ctx],
+.footer-dark[ctx],
+.footer-modern[ctx] {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: map-get($scar-spacers, 2);
+    }
+
+    a {
+        color: var(--scar-text-muted);
+        font-size: $scar-font-size-sm;
+        @include scar-transition(color);
+        text-decoration: none;
+
+        &:hover {
+            color: $scar-primary;
+        }
+    }
+
+    h3,
+    h4,
+    h5 {
+        font-size: $scar-font-size-base;
+        font-weight: $scar-font-weight-semibold;
+        margin-bottom: map-get($scar-spacers, 3);
+    }
+
+    p {
+        font-size: $scar-font-size-sm;
+        color: var(--scar-text-muted);
+        line-height: $scar-line-height;
+    }
+}
+
+.footer-dark[ctx],
+.footer-modern[ctx] {
+
+    h3,
+    h4,
+    h5 {
+        color: $scar-white;
+    }
+
+    a {
+        color: $scar-gray-400;
+
+        &:hover {
+            color: $scar-white;
+        }
+    }
+
+    p {
+        color: $scar-gray-400;
+    }
+}

@@ -1,0 +1,168 @@
+// ============================================
+// ScarX Responsive Utilities (ui attribute)
+// ============================================
+
+// Responsive display
+@each $bp-name, $bp-value in $scar-breakpoints {
+    @media (min-width: $bp-value) {
+
+        // Display
+        [ui~="#{$bp-name}:d-none"] {
+            display: none !important;
+        }
+
+        [ui~="#{$bp-name}:d-block"] {
+            display: block !important;
+        }
+
+        [ui~="#{$bp-name}:d-flex"] {
+            display: flex !important;
+        }
+
+        [ui~="#{$bp-name}:d-grid"] {
+            display: grid !important;
+        }
+
+        [ui~="#{$bp-name}:d-inline"] {
+            display: inline !important;
+        }
+
+        [ui~="#{$bp-name}:d-inline-block"] {
+            display: inline-block !important;
+        }
+
+        [ui~="#{$bp-name}:d-inline-flex"] {
+            display: inline-flex !important;
+        }
+
+        // Flex direction
+        [ui~="#{$bp-name}:flex-row"] {
+            flex-direction: row !important;
+        }
+
+        [ui~="#{$bp-name}:flex-col"] {
+            flex-direction: column !important;
+        }
+
+        // Justify
+        [ui~="#{$bp-name}:justify-start"] {
+            justify-content: flex-start !important;
+        }
+
+        [ui~="#{$bp-name}:justify-center"] {
+            justify-content: center !important;
+        }
+
+        [ui~="#{$bp-name}:justify-end"] {
+            justify-content: flex-end !important;
+        }
+
+        [ui~="#{$bp-name}:justify-between"] {
+            justify-content: space-between !important;
+        }
+
+        // Align
+        [ui~="#{$bp-name}:items-start"] {
+            align-items: flex-start !important;
+        }
+
+        [ui~="#{$bp-name}:items-center"] {
+            align-items: center !important;
+        }
+
+        [ui~="#{$bp-name}:items-end"] {
+            align-items: flex-end !important;
+        }
+
+        [ui~="#{$bp-name}:items-stretch"] {
+            align-items: stretch !important;
+        }
+
+        // Width
+        [ui~="#{$bp-name}:w-full"] {
+            width: 100% !important;
+        }
+
+        [ui~="#{$bp-name}:w-auto"] {
+            width: auto !important;
+        }
+
+        [ui~="#{$bp-name}:w-50p"] {
+            width: 50% !important;
+        }
+
+        [ui~="#{$bp-name}:w-25p"] {
+            width: 25% !important;
+        }
+
+        [ui~="#{$bp-name}:w-75p"] {
+            width: 75% !important;
+        }
+
+        // Text alignment
+        [ui~="#{$bp-name}:text-left"] {
+            text-align: left !important;
+        }
+
+        [ui~="#{$bp-name}:text-center"] {
+            text-align: center !important;
+        }
+
+        [ui~="#{$bp-name}:text-right"] {
+            text-align: right !important;
+        }
+
+        // Grid columns
+        @for $i from 1 through 12 {
+            [ui~="#{$bp-name}:grid-cols-#{$i}"] {
+                display: grid !important;
+                grid-template-columns: repeat(#{$i}, minmax(0, 1fr)) !important;
+            }
+        }
+
+        // Spacing (key sizes)
+        @each $key, $val in $scar-spacers {
+            [ui~="#{$bp-name}:p-#{$key}"] {
+                padding: $val !important;
+            }
+
+            [ui~="#{$bp-name}:px-#{$key}"] {
+                padding-left: $val !important;
+                padding-right: $val !important;
+            }
+
+            [ui~="#{$bp-name}:py-#{$key}"] {
+                padding-top: $val !important;
+                padding-bottom: $val !important;
+            }
+
+            [ui~="#{$bp-name}:m-#{$key}"] {
+                margin: $val !important;
+            }
+
+            [ui~="#{$bp-name}:mx-#{$key}"] {
+                margin-left: $val !important;
+                margin-right: $val !important;
+            }
+
+            [ui~="#{$bp-name}:my-#{$key}"] {
+                margin-top: $val !important;
+                margin-bottom: $val !important;
+            }
+        }
+
+        // Gap
+        @each $key, $val in $scar-spacers {
+            [ui~="#{$bp-name}:gap-#{$key}"] {
+                gap: $val !important;
+            }
+        }
+
+        // Text sizes
+        @each $name, $size in $scar-font-sizes {
+            [ui~="#{$bp-name}:text-#{$name}"] {
+                font-size: $size !important;
+            }
+        }
+    }
+}

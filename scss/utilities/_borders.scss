@@ -1,0 +1,97 @@
+// ============================================
+// ScarX Border Utilities (ui attribute)
+// ============================================
+
+// Border
+[ui~="border"] {
+    border: 1px solid var(--scar-border-color) !important;
+}
+
+[ui~="border-top"] {
+    border-top: 1px solid var(--scar-border-color) !important;
+}
+
+[ui~="border-bottom"] {
+    border-bottom: 1px solid var(--scar-border-color) !important;
+}
+
+[ui~="border-left"] {
+    border-left: 1px solid var(--scar-border-color) !important;
+}
+
+[ui~="border-right"] {
+    border-right: 1px solid var(--scar-border-color) !important;
+}
+
+[ui~="border-none"] {
+    border: none !important;
+}
+
+// Border width
+[ui~="border-2"] {
+    border-width: 2px !important;
+}
+
+[ui~="border-3"] {
+    border-width: 3px !important;
+}
+
+[ui~="border-4"] {
+    border-width: 4px !important;
+}
+
+// Border color
+@each $name, $color in $scar-colors {
+    [ui~="border-#{$name}"] {
+        border-color: $color !important;
+    }
+}
+
+// Border style
+[ui~="border-solid"] {
+    border-style: solid !important;
+}
+
+[ui~="border-dashed"] {
+    border-style: dashed !important;
+}
+
+[ui~="border-dotted"] {
+    border-style: dotted !important;
+}
+
+// Border radius
+@each $name, $radius in $scar-radii {
+    [ui~="rounded-#{$name}"] {
+        border-radius: $radius !important;
+    }
+}
+
+[ui~="rounded"] {
+    border-radius: $scar-radius-md !important;
+}
+
+[ui~="rounded-t"] {
+    border-radius: $scar-radius-md $scar-radius-md 0 0 !important;
+}
+
+[ui~="rounded-b"] {
+    border-radius: 0 0 $scar-radius-md $scar-radius-md !important;
+}
+
+[ui~="rounded-l"] {
+    border-radius: $scar-radius-md 0 0 $scar-radius-md !important;
+}
+
+[ui~="rounded-r"] {
+    border-radius: 0 $scar-radius-md $scar-radius-md 0 !important;
+}
+
+// Divider
+[ui~="divide-y"]>*+* {
+    border-top: 1px solid var(--scar-border-color) !important;
+}
+
+[ui~="divide-x"]>*+* {
+    border-left: 1px solid var(--scar-border-color) !important;
+}

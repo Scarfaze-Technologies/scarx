@@ -1,0 +1,63 @@
+// ============================================
+// ScarX Pagination Component
+// ============================================
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: map-get($scar-spacers, 1);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination-item {
+
+    a,
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 36px;
+        height: 36px;
+        padding: 0 0.5rem;
+        font-size: $scar-font-size-sm;
+        font-weight: $scar-font-weight-medium;
+        color: var(--scar-text-color);
+        background: var(--scar-surface-color);
+        border: 1px solid var(--scar-border-color);
+        border-radius: $scar-radius-md;
+        cursor: pointer;
+        @include scar-transition(all);
+        text-decoration: none;
+
+        &:hover {
+            border-color: $scar-primary;
+            color: $scar-primary;
+            background: rgba($scar-primary, 0.05);
+        }
+    }
+
+    &.active a,
+    &.active button {
+        background: $scar-primary;
+        border-color: $scar-primary;
+        color: $scar-white;
+    }
+
+    &.disabled a,
+    &.disabled button {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+
+// Rounded variant
+.pagination-rounded {
+
+    .pagination-item a,
+    .pagination-item button {
+        border-radius: $scar-radius-full;
+    }
+}

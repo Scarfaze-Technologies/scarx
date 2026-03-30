@@ -1,0 +1,94 @@
+// ============================================
+// ScarX Color Utilities (ui attribute)
+// ============================================
+
+// Background colors
+@each $name, $color in $scar-colors {
+    [ui~="bg-#{$name}"] {
+        background-color: $color !important;
+    }
+}
+
+[ui~="bg-white"] {
+    background-color: $scar-white !important;
+}
+
+[ui~="bg-black"] {
+    background-color: $scar-black !important;
+}
+
+[ui~="bg-transparent"] {
+    background-color: transparent !important;
+}
+
+[ui~="bg-surface"] {
+    background-color: var(--scar-surface-color) !important;
+}
+
+[ui~="bg-body"] {
+    background-color: var(--scar-bg-color) !important;
+}
+
+// Background with opacity
+@each $name, $color in $scar-colors {
+    [ui~="bg-#{$name}-soft"] {
+        background-color: rgba($color, 0.1) !important;
+    }
+}
+
+// Gradient backgrounds
+[ui~="bg-gradient-primary"] {
+    background: linear-gradient(135deg, $scar-primary, $scar-primary-light) !important;
+}
+
+[ui~="bg-gradient-secondary"] {
+    background: linear-gradient(135deg, $scar-secondary, $scar-secondary-light) !important;
+}
+
+[ui~="bg-gradient-dark"] {
+    background: linear-gradient(135deg, $scar-dark, lighten($scar-dark, 15%)) !important;
+}
+
+[ui~="bg-gradient-sunset"] {
+    background: linear-gradient(135deg, #F97316, #EC4899) !important;
+}
+
+[ui~="bg-gradient-ocean"] {
+    background: linear-gradient(135deg, $scar-info, $scar-secondary) !important;
+}
+
+// Text colors
+@each $name, $color in $scar-colors {
+    [ui~="text-#{$name}"] {
+        color: $color !important;
+    }
+}
+
+[ui~="text-white"] {
+    color: $scar-white !important;
+}
+
+[ui~="text-black"] {
+    color: $scar-black !important;
+}
+
+[ui~="text-body"] {
+    color: var(--scar-text-color) !important;
+}
+
+// Gray scale text
+[ui~="text-gray-400"] {
+    color: $scar-gray-400 !important;
+}
+
+[ui~="text-gray-500"] {
+    color: $scar-gray-500 !important;
+}
+
+[ui~="text-gray-600"] {
+    color: $scar-gray-600 !important;
+}
+
+[ui~="text-gray-700"] {
+    color: $scar-gray-700 !important;
+}

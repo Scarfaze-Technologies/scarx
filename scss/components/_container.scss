@@ -1,0 +1,53 @@
+// ============================================
+// ScarX Container Component
+// ============================================
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: map-get($scar-spacers, 3);
+    padding-right: map-get($scar-spacers, 3);
+
+    @each $bp-name, $bp-value in $scar-breakpoints {
+        @media (min-width: $bp-value) {
+            max-width: map-get($scar-container-widths, $bp-name);
+        }
+    }
+}
+
+.container-fluid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: map-get($scar-spacers, 3);
+    padding-right: map-get($scar-spacers, 3);
+}
+
+// Fixed containers
+@each $bp-name, $bp-value in $scar-breakpoints {
+    .container-#{$bp-name} {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: map-get($scar-spacers, 3);
+        padding-right: map-get($scar-spacers, 3);
+
+        @media (min-width: $bp-value) {
+            max-width: map-get($scar-container-widths, $bp-name);
+        }
+    }
+}
+
+// Section helper
+.section {
+    padding: map-get($scar-spacers, 7) 0;
+}
+
+.section-sm {
+    padding: map-get($scar-spacers, 5) 0;
+}
+
+.section-lg {
+    padding: map-get($scar-spacers, 8) 0;
+}

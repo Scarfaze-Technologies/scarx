@@ -1,0 +1,122 @@
+// ============================================
+// ScarX Tooltip Component
+// ============================================
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+    &::before,
+    &::after {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        @include scar-transition(all, $scar-transition-fast);
+        pointer-events: none;
+        z-index: map-get($scar-z-indexes, "tooltip");
+    }
+
+    &::before {
+        content: attr(data-tooltip);
+        padding: 0.35em 0.65em;
+        font-size: $scar-font-size-xs;
+        font-weight: $scar-font-weight-medium;
+        background: $scar-gray-900;
+        color: $scar-white;
+        border-radius: $scar-radius-sm;
+        white-space: nowrap;
+        line-height: 1.4;
+    }
+
+    &::after {
+        content: "";
+        border: 5px solid transparent;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// Top (default)
+.tooltip,
+.tooltip-top {
+    &::before {
+        bottom: calc(100% + 8px);
+        left: 50%;
+        transform: translateX(-50%) translateY(4px);
+    }
+
+    &::after {
+        bottom: calc(100% + -2px);
+        left: 50%;
+        transform: translateX(-50%);
+        border-top-color: $scar-gray-900;
+    }
+
+    &:hover::before {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+// Bottom
+.tooltip-bottom {
+    &::before {
+        top: calc(100% + 8px);
+        left: 50%;
+        transform: translateX(-50%) translateY(-4px);
+    }
+
+    &::after {
+        top: calc(100% + -2px);
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom-color: $scar-gray-900;
+    }
+
+    &:hover::before {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+// Left
+.tooltip-left {
+    &::before {
+        right: calc(100% + 8px);
+        top: 50%;
+        transform: translateY(-50%) translateX(4px);
+    }
+
+    &::after {
+        right: calc(100% + -2px);
+        top: 50%;
+        transform: translateY(-50%);
+        border-left-color: $scar-gray-900;
+    }
+
+    &:hover::before {
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+// Right
+.tooltip-right {
+    &::before {
+        left: calc(100% + 8px);
+        top: 50%;
+        transform: translateY(-50%) translateX(-4px);
+    }
+
+    &::after {
+        left: calc(100% + -2px);
+        top: 50%;
+        transform: translateY(-50%);
+        border-right-color: $scar-gray-900;
+    }
+
+    &:hover::before {
+        transform: translateY(-50%) translateX(0);
+    }
+}

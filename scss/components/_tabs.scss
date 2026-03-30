@@ -1,0 +1,107 @@
+// ============================================
+// ScarX Tabs Component
+// ============================================
+
+.tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--scar-border-color);
+    margin-bottom: map-get($scar-spacers, 3);
+    overflow-x: auto;
+}
+
+.tabs-item {
+    padding: map-get($scar-spacers, 2) map-get($scar-spacers, 3);
+    font-size: $scar-font-size-sm;
+    font-weight: $scar-font-weight-medium;
+    color: var(--scar-text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    @include scar-transition(all);
+    white-space: nowrap;
+    text-decoration: none;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    &:hover {
+        color: $scar-primary;
+    }
+
+    &.active {
+        color: $scar-primary;
+        border-bottom-color: $scar-primary;
+    }
+}
+
+// Pill variant
+.tabs-pills {
+    border-bottom: none;
+    gap: map-get($scar-spacers, 1);
+    background: $scar-gray-100;
+    border-radius: $scar-radius-md;
+    padding: map-get($scar-spacers, 1);
+
+    [data-theme="dark"] & {
+        background: $scar-dark-surface;
+    }
+
+    .tabs-item {
+        border-bottom: none;
+        margin-bottom: 0;
+        border-radius: $scar-radius-sm;
+        padding: map-get($scar-spacers, 2) map-get($scar-spacers, 3);
+
+        &.active {
+            background: var(--scar-surface-color);
+            color: $scar-primary;
+            @include scar-shadow("sm");
+        }
+    }
+}
+
+// Vertical tabs
+.tabs-vertical {
+    flex-direction: column;
+    border-bottom: none;
+    border-right: 2px solid var(--scar-border-color);
+    margin-bottom: 0;
+    margin-right: map-get($scar-spacers, 3);
+
+    .tabs-item {
+        border-bottom: none;
+        border-right: 2px solid transparent;
+        margin-bottom: 0;
+        margin-right: -2px;
+
+        &.active {
+            border-right-color: $scar-primary;
+        }
+    }
+}
+
+// Tab content
+.tabs-content {
+    .tabs-pane {
+        display: none;
+
+        &.active {
+            display: block;
+            animation: scarFadeIn 250ms ease;
+        }
+    }
+}
+
+@keyframes scarFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

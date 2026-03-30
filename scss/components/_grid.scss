@@ -1,0 +1,76 @@
+// ============================================
+// ScarX Grid Component
+// ============================================
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * map-get($scar-spacers, 3) / 2);
+    margin-right: calc(-1 * map-get($scar-spacers, 3) / 2);
+}
+
+.col {
+    flex: 1 0 0%;
+    padding-left: calc(map-get($scar-spacers, 3) / 2);
+    padding-right: calc(map-get($scar-spacers, 3) / 2);
+}
+
+// Fixed columns
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        flex: 0 0 auto;
+        width: calc(#{$i} / 12 * 100%);
+        padding-left: calc(map-get($scar-spacers, 3) / 2);
+        padding-right: calc(map-get($scar-spacers, 3) / 2);
+    }
+}
+
+// Offset
+@for $i from 1 through 11 {
+    .col-offset-#{$i} {
+        margin-left: calc(#{$i} / 12 * 100%);
+    }
+}
+
+// Responsive columns
+@each $bp-name, $bp-value in $scar-breakpoints {
+    @media (min-width: $bp-value) {
+        .col-#{$bp-name} {
+            flex: 1 0 0%;
+        }
+
+        @for $i from 1 through 12 {
+            .col-#{$bp-name}-#{$i} {
+                flex: 0 0 auto;
+                width: calc(#{$i} / 12 * 100%);
+            }
+        }
+
+        @for $i from 1 through 11 {
+            .col-#{$bp-name}-offset-#{$i} {
+                margin-left: calc(#{$i} / 12 * 100%);
+            }
+        }
+    }
+}
+
+// Row gap utilities
+.row-gap-1 {
+    row-gap: map-get($scar-spacers, 1);
+}
+
+.row-gap-2 {
+    row-gap: map-get($scar-spacers, 2);
+}
+
+.row-gap-3 {
+    row-gap: map-get($scar-spacers, 3);
+}
+
+.row-gap-4 {
+    row-gap: map-get($scar-spacers, 4);
+}
+
+.row-gap-5 {
+    row-gap: map-get($scar-spacers, 5);
+}

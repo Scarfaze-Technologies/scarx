@@ -1,0 +1,59 @@
+// ============================================
+// ScarX Context: Hero (ctx)
+// ============================================
+
+.hero[ctx],
+.hero-modern[ctx],
+.hero-dark[ctx],
+.hero-gradient[ctx],
+.hero-image[ctx] {
+    h1 {
+        font-size: clamp($scar-font-size-3xl, 5vw, $scar-font-size-4xl);
+        font-weight: $scar-font-weight-bold;
+        margin-bottom: map-get($scar-spacers, 3);
+        line-height: $scar-line-height-sm;
+        max-width: 800px;
+    }
+
+    h2 {
+        font-size: clamp($scar-font-size-2xl, 4vw, $scar-font-size-3xl);
+        font-weight: $scar-font-weight-bold;
+        margin-bottom: map-get($scar-spacers, 3);
+    }
+
+    p {
+        font-size: clamp($scar-font-size-md, 2vw, $scar-font-size-xl);
+        opacity: 0.85;
+        margin-bottom: map-get($scar-spacers, 5);
+        max-width: 600px;
+        line-height: $scar-line-height;
+    }
+
+    a,
+    button {
+        &:not(.btn):not([class*="btn-"]) {
+            color: inherit;
+            font-weight: $scar-font-weight-medium;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            @include scar-transition(opacity);
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+// Dark / Gradient hero
+.hero-dark[ctx],
+.hero-gradient[ctx],
+.hero-image[ctx] {
+
+    h1,
+    h2,
+    h3,
+    p {
+        color: $scar-white;
+    }
+}

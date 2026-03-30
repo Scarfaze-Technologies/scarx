@@ -1,0 +1,209 @@
+// ============================================
+// ScarX Variables - Design Tokens
+// ============================================
+
+// ---- Color Palette ----
+$scar-primary: #6C5CE7 !default;
+$scar-primary-light: #A29BFE !default;
+$scar-primary-dark: #4B3DC9 !default;
+
+$scar-secondary: #00CEC9 !default;
+$scar-secondary-light: #55EFC4 !default;
+$scar-secondary-dark: #00A8A3 !default;
+
+$scar-success: #00B894 !default;
+$scar-success-light: #55EFC4 !default;
+$scar-success-dark: #008C6E !default;
+
+$scar-danger: #FF6B6B !default;
+$scar-danger-light: #FF8E8E !default;
+$scar-danger-dark: #E04848 !default;
+
+$scar-warning: #FDCB6E !default;
+$scar-warning-light: #FFEAA7 !default;
+$scar-warning-dark: #E0A800 !default;
+
+$scar-info: #74B9FF !default;
+$scar-info-light: #A0D2FF !default;
+$scar-info-dark: #4A9AE0 !default;
+
+$scar-dark: #2D3436 !default;
+$scar-dark-light: #636E72 !default;
+
+$scar-light: #F5F6FA !default;
+$scar-light-dark: #DFE6E9 !default;
+
+$scar-white: #FFFFFF !default;
+$scar-black: #0A0A0A !default;
+
+// Neutral grays
+$scar-gray-100: #F8F9FA !default;
+$scar-gray-200: #E9ECEF !default;
+$scar-gray-300: #DEE2E6 !default;
+$scar-gray-400: #CED4DA !default;
+$scar-gray-500: #ADB5BD !default;
+$scar-gray-600: #6C757D !default;
+$scar-gray-700: #495057 !default;
+$scar-gray-800: #343A40 !default;
+$scar-gray-900: #212529 !default;
+
+// ---- Color Map ----
+$scar-colors: (
+    "primary": $scar-primary,
+    "secondary": $scar-secondary,
+    "success": $scar-success,
+    "danger": $scar-danger,
+    "warning": $scar-warning,
+    "info": $scar-info,
+    "dark": $scar-dark,
+    "light": $scar-light,
+    ) !default;
+
+// ---- Typography ----
+$scar-font-family: 'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    sans-serif !default;
+$scar-font-family-mono: 'JetBrains Mono',
+    'Fira Code',
+    'Consolas',
+    monospace !default;
+
+$scar-font-size-xs: 0.75rem !default; // 12px
+$scar-font-size-sm: 0.875rem !default; // 14px
+$scar-font-size-base: 1rem !default; // 16px
+$scar-font-size-md: 1.125rem !default; // 18px
+$scar-font-size-lg: 1.25rem !default; // 20px
+$scar-font-size-xl: 1.5rem !default; // 24px
+$scar-font-size-2xl: 2rem !default; // 32px
+$scar-font-size-3xl: 2.5rem !default; // 40px
+$scar-font-size-4xl: 3rem !default; // 48px
+
+$scar-font-sizes: (
+    "xs": $scar-font-size-xs,
+    "sm": $scar-font-size-sm,
+    "base": $scar-font-size-base,
+    "md": $scar-font-size-md,
+    "lg": $scar-font-size-lg,
+    "xl": $scar-font-size-xl,
+    "2xl": $scar-font-size-2xl,
+    "3xl": $scar-font-size-3xl,
+    "4xl": $scar-font-size-4xl,
+    ) !default;
+
+$scar-font-weight-light: 300 !default;
+$scar-font-weight-normal: 400 !default;
+$scar-font-weight-medium: 500 !default;
+$scar-font-weight-semibold: 600 !default;
+$scar-font-weight-bold: 700 !default;
+$scar-font-weight-black: 900 !default;
+
+$scar-line-height: 1.6 !default;
+$scar-line-height-sm: 1.3 !default;
+$scar-line-height-lg: 1.8 !default;
+
+// ---- Spacing ----
+$scar-spacer: 1rem !default;
+$scar-spacers: (
+    0: 0,
+    1: ($scar-spacer * 0.25),
+    // 4px
+    2: ($scar-spacer * 0.5),
+    // 8px
+    3: $scar-spacer,
+    // 16px
+    4: ($scar-spacer * 1.5),
+    // 24px
+    5: ($scar-spacer * 2),
+    // 32px
+    6: ($scar-spacer * 3),
+    // 48px
+    7: ($scar-spacer * 4),
+    // 64px
+    8: ($scar-spacer * 5),
+    // 80px
+    ) !default;
+
+// ---- Border Radius ----
+$scar-radius-none: 0 !default;
+$scar-radius-sm: 4px !default;
+$scar-radius-md: 8px !default;
+$scar-radius-lg: 12px !default;
+$scar-radius-xl: 16px !default;
+$scar-radius-2xl: 24px !default;
+$scar-radius-full: 9999px !default;
+
+$scar-radii: (
+    "none": $scar-radius-none,
+    "sm": $scar-radius-sm,
+    "md": $scar-radius-md,
+    "lg": $scar-radius-lg,
+    "xl": $scar-radius-xl,
+    "2xl": $scar-radius-2xl,
+    "full": $scar-radius-full,
+    ) !default;
+
+// ---- Shadows ----
+$scar-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08) !default;
+$scar-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1) !default;
+$scar-shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12) !default;
+$scar-shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.16) !default;
+$scar-shadow-inner: inset 0 2px 6px rgba(0, 0, 0, 0.08) !default;
+$scar-shadow-none: none !default;
+
+$scar-shadows: (
+    "sm": $scar-shadow-sm,
+    "md": $scar-shadow-md,
+    "lg": $scar-shadow-lg,
+    "xl": $scar-shadow-xl,
+    "inner": $scar-shadow-inner,
+    "none": $scar-shadow-none,
+    ) !default;
+
+// ---- Breakpoints ----
+$scar-breakpoints: (
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px,
+    "2xl": 1400px,
+    ) !default;
+
+// ---- Container Widths ----
+$scar-container-widths: (
+    "sm": 540px,
+    "md": 720px,
+    "lg": 960px,
+    "xl": 1140px,
+    "2xl": 1320px,
+    ) !default;
+
+// ---- Transitions ----
+$scar-transition-fast: 150ms ease !default;
+$scar-transition-base: 250ms ease !default;
+$scar-transition-slow: 400ms ease !default;
+$scar-transition-spring: 300ms cubic-bezier(0.34, 1.56, 0.64, 1) !default;
+
+// ---- Z-Index ----
+$scar-z-indexes: (
+    "dropdown": 1000,
+    "sticky": 1020,
+    "fixed": 1030,
+    "modal-bg": 1040,
+    "modal": 1050,
+    "popover": 1060,
+    "tooltip": 1070,
+    "toast": 1080,
+    ) !default;
+
+// ---- Dark Theme ----
+$scar-dark-bg: #1A1A2E !default;
+$scar-dark-surface: #16213E !default;
+$scar-dark-card: #1E2A45 !default;
+$scar-dark-text: #E8E8E8 !default;
+$scar-dark-text-muted: #A0A0B0 !default;
+$scar-dark-border: #2A2A4A !default;

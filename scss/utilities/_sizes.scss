@@ -1,0 +1,156 @@
+// ============================================
+// ScarX Size Utilities (ui attribute)
+// ============================================
+
+// Fixed widths
+$scar-widths: (
+    25,
+    50,
+    75,
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400,
+    450,
+    500,
+    600,
+    700,
+    800
+);
+
+@each $w in $scar-widths {
+    [ui~="w-#{$w}"] {
+        width: #{$w}px !important;
+    }
+}
+
+// Percentage widths
+[ui~="w-25p"] {
+    width: 25% !important;
+}
+
+[ui~="w-50p"] {
+    width: 50% !important;
+}
+
+[ui~="w-75p"] {
+    width: 75% !important;
+}
+
+[ui~="w-full"] {
+    width: 100% !important;
+}
+
+[ui~="w-auto"] {
+    width: auto !important;
+}
+
+[ui~="w-screen"] {
+    width: 100vw !important;
+}
+
+// Min / Max widths
+[ui~="min-w-0"] {
+    min-width: 0 !important;
+}
+
+[ui~="min-w-full"] {
+    min-width: 100% !important;
+}
+
+[ui~="max-w-sm"] {
+    max-width: 540px !important;
+}
+
+[ui~="max-w-md"] {
+    max-width: 720px !important;
+}
+
+[ui~="max-w-lg"] {
+    max-width: 960px !important;
+}
+
+[ui~="max-w-xl"] {
+    max-width: 1140px !important;
+}
+
+[ui~="max-w-2xl"] {
+    max-width: 1320px !important;
+}
+
+[ui~="max-w-full"] {
+    max-width: 100% !important;
+}
+
+[ui~="max-w-none"] {
+    max-width: none !important;
+}
+
+// Fixed heights
+$scar-heights: (
+    25,
+    50,
+    75,
+    100,
+    150,
+    200,
+    250,
+    300,
+    400,
+    500
+);
+
+@each $h in $scar-heights {
+    [ui~="h-#{$h}"] {
+        height: #{$h}px !important;
+    }
+}
+
+// Percentage heights
+[ui~="h-25p"] {
+    height: 25% !important;
+}
+
+[ui~="h-50p"] {
+    height: 50% !important;
+}
+
+[ui~="h-75p"] {
+    height: 75% !important;
+}
+
+[ui~="h-full"] {
+    height: 100% !important;
+}
+
+[ui~="h-auto"] {
+    height: auto !important;
+}
+
+[ui~="h-screen"] {
+    height: 100vh !important;
+}
+
+// Min / Max heights
+[ui~="min-h-0"] {
+    min-height: 0 !important;
+}
+
+[ui~="min-h-full"] {
+    min-height: 100% !important;
+}
+
+[ui~="min-h-screen"] {
+    min-height: 100vh !important;
+}
+
+[ui~="max-h-full"] {
+    max-height: 100% !important;
+}
+
+[ui~="max-h-screen"] {
+    max-height: 100vh !important;
+}

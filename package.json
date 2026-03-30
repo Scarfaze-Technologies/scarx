@@ -1,0 +1,34 @@
+{
+    "name": "scarx",
+    "version": "1.0.0",
+    "description": "A modern, scalable, developer-friendly CSS framework built on a 3-layer architecture (class, ui, ctx).",
+    "main": "dist/scar.css",
+    "scripts": {
+        "build": "sass scss/main.scss dist/scar.css --no-source-map",
+        "build:min": "sass scss/main.scss dist/scar.min.css --style=compressed --no-source-map",
+        "build:all": "npm run build && npm run build:min",
+        "watch": "sass --watch scss/main.scss:dist/scar.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/scarfaze/scarx.git"
+    },
+    "keywords": [
+        "css",
+        "framework",
+        "ui",
+        "components",
+        "sass",
+        "scss",
+        "frontend"
+    ],
+    "author": "Zawiyar Awan <zawiyar@scarfaze.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/scarfaze/scarx/issues"
+    },
+    "homepage": "https://github.com/scarfaze/scarx#readme",
+    "devDependencies": {
+        "sass": "^1.72.0"
+    }
+}

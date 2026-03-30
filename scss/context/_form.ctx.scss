@@ -1,0 +1,114 @@
+// ============================================
+// ScarX Context: Form (ctx)
+// ============================================
+
+.form-group[ctx],
+form[ctx] {
+    label {
+        display: block;
+        margin-bottom: map-get($scar-spacers, 1);
+        font-size: $scar-font-size-sm;
+        font-weight: $scar-font-weight-medium;
+        color: var(--scar-text-color);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="search"],
+    input[type="date"],
+    input[type="datetime-local"],
+    input[type="time"] {
+        display: block;
+        width: 100%;
+        padding: 0.625rem 0.875rem;
+        font-size: $scar-font-size-base;
+        font-family: inherit;
+        line-height: 1.5;
+        color: var(--scar-text-color);
+        background: var(--scar-surface-color);
+        border: 1.5px solid var(--scar-border-color);
+        border-radius: $scar-radius-md;
+        @include scar-transition(all);
+        appearance: none;
+
+        &::placeholder {
+            color: var(--scar-text-muted);
+            opacity: 0.7;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $scar-primary;
+            box-shadow: 0 0 0 3px rgba($scar-primary, 0.15);
+        }
+    }
+
+    select {
+        display: block;
+        width: 100%;
+        padding: 0.625rem 0.875rem;
+        font-size: $scar-font-size-base;
+        color: var(--scar-text-color);
+        background: var(--scar-surface-color);
+        border: 1.5px solid var(--scar-border-color);
+        border-radius: $scar-radius-md;
+        cursor: pointer;
+        @include scar-transition(all);
+
+        &:focus {
+            outline: none;
+            border-color: $scar-primary;
+            box-shadow: 0 0 0 3px rgba($scar-primary, 0.15);
+        }
+    }
+
+    textarea {
+        display: block;
+        width: 100%;
+        min-height: 120px;
+        padding: 0.625rem 0.875rem;
+        font-size: $scar-font-size-base;
+        font-family: inherit;
+        color: var(--scar-text-color);
+        background: var(--scar-surface-color);
+        border: 1.5px solid var(--scar-border-color);
+        border-radius: $scar-radius-md;
+        resize: vertical;
+        @include scar-transition(all);
+
+        &:focus {
+            outline: none;
+            border-color: $scar-primary;
+            box-shadow: 0 0 0 3px rgba($scar-primary, 0.15);
+        }
+    }
+
+    button[type="submit"],
+    input[type="submit"] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.625rem 1.5rem;
+        background: $scar-primary;
+        color: $scar-white;
+        border: none;
+        border-radius: $scar-radius-md;
+        font-weight: $scar-font-weight-medium;
+        cursor: pointer;
+        @include scar-transition(all);
+
+        &:hover {
+            background: $scar-primary-dark;
+            box-shadow: 0 6px 20px rgba($scar-primary, 0.35);
+        }
+    }
+
+    // Auto spacing between form elements
+    >*+* {
+        margin-top: map-get($scar-spacers, 3);
+    }
+}

@@ -1,0 +1,94 @@
+// ============================================
+// ScarX Accordion Component
+// ============================================
+
+.accordion {
+    border: 1px solid var(--scar-border-color);
+    border-radius: $scar-radius-lg;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--scar-border-color);
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: map-get($scar-spacers, 3) map-get($scar-spacers, 4);
+    font-size: $scar-font-size-base;
+    font-weight: $scar-font-weight-medium;
+    color: var(--scar-text-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    @include scar-transition(all);
+
+    &:hover {
+        background: rgba($scar-primary, 0.04);
+    }
+
+    &::after {
+        content: "+";
+        font-size: 1.25rem;
+        font-weight: $scar-font-weight-light;
+        color: var(--scar-text-muted);
+        @include scar-transition(transform);
+        flex-shrink: 0;
+        margin-left: map-get($scar-spacers, 2);
+    }
+
+    &.active::after {
+        content: "−";
+        color: $scar-primary;
+    }
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    @include scar-transition(max-height, $scar-transition-slow);
+
+    &.active {
+        max-height: 500px;
+    }
+}
+
+.accordion-content {
+    padding: 0 map-get($scar-spacers, 4) map-get($scar-spacers, 4);
+    color: var(--scar-text-muted);
+    font-size: $scar-font-size-sm;
+    line-height: $scar-line-height;
+}
+
+// Flush variant (no outer border)
+.accordion-flush {
+    border: none;
+    border-radius: 0;
+
+    .accordion-item {
+        border-bottom: 1px solid var(--scar-border-color);
+    }
+}
+
+// Card style
+.accordion-card {
+    border: none;
+
+    .accordion-item {
+        border: 1px solid var(--scar-border-color);
+        border-radius: $scar-radius-md;
+        margin-bottom: map-get($scar-spacers, 2);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

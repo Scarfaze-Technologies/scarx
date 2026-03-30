@@ -1,0 +1,81 @@
+// ============================================
+// ScarX Table Component
+// ============================================
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: $scar-font-size-sm;
+
+    th,
+    td {
+        padding: map-get($scar-spacers, 2) map-get($scar-spacers, 3);
+        text-align: left;
+        vertical-align: middle;
+        border-bottom: 1px solid var(--scar-border-color);
+    }
+
+    th {
+        font-weight: $scar-font-weight-semibold;
+        color: var(--scar-text-muted);
+        text-transform: uppercase;
+        font-size: $scar-font-size-xs;
+        letter-spacing: 0.05em;
+        background: $scar-gray-100;
+
+        [data-theme="dark"] & {
+            background: $scar-dark-surface;
+        }
+    }
+
+    td {
+        color: var(--scar-text-color);
+    }
+}
+
+.table-striped {
+    tbody tr:nth-child(even) {
+        background: rgba($scar-gray-100, 0.5);
+
+        [data-theme="dark"] & {
+            background: rgba($scar-dark-surface, 0.5);
+        }
+    }
+}
+
+.table-hover {
+    tbody tr {
+        @include scar-transition(background);
+
+        &:hover {
+            background: rgba($scar-primary, 0.04);
+        }
+    }
+}
+
+.table-bordered {
+    border: 1px solid var(--scar-border-color);
+
+    th,
+    td {
+        border: 1px solid var(--scar-border-color);
+    }
+}
+
+.table-compact {
+
+    th,
+    td {
+        padding: map-get($scar-spacers, 1) map-get($scar-spacers, 2);
+    }
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    .table {
+        min-width: 600px;
+    }
+}

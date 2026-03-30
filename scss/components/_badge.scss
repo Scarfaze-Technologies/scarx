@@ -1,0 +1,58 @@
+// ============================================
+// ScarX Badge Component
+// ============================================
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2em 0.65em;
+    font-size: $scar-font-size-xs;
+    font-weight: $scar-font-weight-semibold;
+    line-height: 1;
+    border-radius: $scar-radius-sm;
+    white-space: nowrap;
+    vertical-align: middle;
+    background: $scar-gray-200;
+    color: $scar-gray-700;
+}
+
+// Color variants
+@each $name, $color in $scar-colors {
+    .badge-#{$name} {
+        background: rgba($color, 0.12);
+        color: $color;
+    }
+}
+
+// Solid variants
+@each $name, $color in $scar-colors {
+    .badge-solid-#{$name} {
+        background: $color;
+        color: $scar-white;
+    }
+}
+
+// Pill
+.badge-pill {
+    border-radius: $scar-radius-full;
+    padding: 0.25em 0.75em;
+}
+
+// Outline
+.badge-outline {
+    background: transparent;
+    border: 1.5px solid currentColor;
+}
+
+// Dot
+.badge-dot {
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: $scar-radius-full;
+        background: currentColor;
+    }
+}

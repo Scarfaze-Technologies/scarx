@@ -1,0 +1,66 @@
+// ============================================
+// ScarX Alert Component
+// ============================================
+
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: map-get($scar-spacers, 3);
+    border-radius: $scar-radius-md;
+    font-size: $scar-font-size-sm;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    margin-bottom: map-get($scar-spacers, 3);
+    position: relative;
+
+    p {
+        margin: 0;
+    }
+}
+
+@each $name, $color in $scar-colors {
+    .alert-#{$name} {
+        background: rgba($color, 0.08);
+        border-color: rgba($color, 0.2);
+        color: darken($color, 10%);
+
+        [data-theme="dark"] & {
+            background: rgba($color, 0.12);
+            color: lighten($color, 15%);
+        }
+    }
+}
+
+.alert-dismissable {
+    padding-right: map-get($scar-spacers, 6);
+}
+
+.alert-close {
+    position: absolute;
+    top: map-get($scar-spacers, 2);
+    right: map-get($scar-spacers, 2);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: $scar-radius-full;
+    font-size: 1rem;
+    color: inherit;
+    opacity: 0.6;
+    @include scar-transition(all);
+
+    &:hover {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.08);
+    }
+}
+
+.alert-title {
+    font-weight: $scar-font-weight-semibold;
+    margin-bottom: map-get($scar-spacers, 1);
+}

@@ -1,0 +1,81 @@
+// ============================================
+// ScarX Hero Component
+// ============================================
+
+.hero {
+    padding: map-get($scar-spacers, 8) map-get($scar-spacers, 4);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+// Variants
+.hero-modern {
+    @extend .hero;
+    background: var(--scar-surface-color);
+}
+
+.hero-dark {
+    @extend .hero;
+    background: $scar-dark;
+    color: $scar-white;
+}
+
+.hero-gradient {
+    @extend .hero;
+    background: linear-gradient(135deg, $scar-primary 0%, $scar-secondary 100%);
+    color: $scar-white;
+}
+
+.hero-fullscreen {
+    min-height: 100vh;
+}
+
+.hero-image {
+    @extend .hero;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    >* {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+// Children
+.hero-title {
+    font-size: clamp($scar-font-size-3xl, 5vw, $scar-font-size-4xl);
+    font-weight: $scar-font-weight-bold;
+    margin-bottom: map-get($scar-spacers, 3);
+    line-height: $scar-line-height-sm;
+    max-width: 800px;
+}
+
+.hero-subtitle {
+    font-size: clamp($scar-font-size-md, 2vw, $scar-font-size-xl);
+    opacity: 0.85;
+    margin-bottom: map-get($scar-spacers, 5);
+    max-width: 600px;
+    line-height: $scar-line-height;
+    font-weight: $scar-font-weight-normal;
+}
+
+.hero-cta {
+    display: flex;
+    gap: map-get($scar-spacers, 3);
+    flex-wrap: wrap;
+    justify-content: center;
+}

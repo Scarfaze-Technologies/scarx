@@ -1,0 +1,167 @@
+// ============================================
+// ScarX Navbar Component
+// ============================================
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: map-get($scar-spacers, 3) map-get($scar-spacers, 4);
+    background: var(--scar-surface-color);
+    border-bottom: 1px solid var(--scar-border-color);
+    position: relative;
+    z-index: map-get($scar-z-indexes, "sticky");
+}
+
+// ---- Variants ----
+.navbar-modern {
+    @extend .navbar;
+    background: var(--scar-surface-color);
+    @include scar-shadow("sm");
+    border-bottom: none;
+}
+
+.navbar-transparent {
+    @extend .navbar;
+    background: transparent;
+    border-bottom: none;
+}
+
+.navbar-dark {
+    @extend .navbar;
+    background: $scar-dark;
+    border-bottom: none;
+    color: $scar-white;
+}
+
+.navbar-glass {
+    @extend .navbar;
+    @include scar-glass(20px, 0.1);
+    border-bottom: none;
+}
+
+.navbar-sticky {
+    position: sticky;
+    top: 0;
+}
+
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+// ---- Navbar Children ----
+.navbar-brand {
+    font-size: $scar-font-size-xl;
+    font-weight: $scar-font-weight-bold;
+    color: var(--scar-text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+        height: 36px;
+        width: auto;
+    }
+
+    .navbar-dark & {
+        color: $scar-white;
+    }
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: map-get($scar-spacers, 1);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include scar-breakpoint-down("md") {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--scar-surface-color);
+        padding: map-get($scar-spacers, 3);
+        @include scar-shadow("lg");
+        border-radius: 0 0 $scar-radius-lg $scar-radius-lg;
+
+        &.active {
+            display: flex;
+        }
+    }
+}
+
+.navbar-item {
+    a {
+        display: block;
+        padding: map-get($scar-spacers, 2) map-get($scar-spacers, 3);
+        color: var(--scar-text-color);
+        font-weight: $scar-font-weight-medium;
+        border-radius: $scar-radius-md;
+        @include scar-transition(all);
+
+        &:hover {
+            background: rgba($scar-primary, 0.08);
+            color: $scar-primary;
+        }
+
+        &.active {
+            color: $scar-primary;
+            background: rgba($scar-primary, 0.1);
+        }
+
+        .navbar-dark & {
+            color: rgba($scar-white, 0.85);
+
+            &:hover {
+                color: $scar-white;
+                background: rgba($scar-white, 0.1);
+            }
+        }
+    }
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: map-get($scar-spacers, 2);
+    border-radius: $scar-radius-md;
+    @include scar-transition(background);
+
+    &:hover {
+        background: rgba($scar-primary, 0.08);
+    }
+
+    span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--scar-text-color);
+        border-radius: 2px;
+        @include scar-transition(all);
+
+        .navbar-dark & {
+            background: $scar-white;
+        }
+    }
+
+    @include scar-breakpoint-down("md") {
+        display: flex;
+    }
+}
+
+// ---- Navbar actions (right side buttons etc) ----
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: map-get($scar-spacers, 2);
+}

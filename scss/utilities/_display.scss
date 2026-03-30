@@ -1,0 +1,213 @@
+// ============================================
+// ScarX Display Utilities (ui attribute)
+// ============================================
+
+// Display
+[ui~="d-none"] {
+    display: none !important;
+}
+
+[ui~="d-block"] {
+    display: block !important;
+}
+
+[ui~="d-inline"] {
+    display: inline !important;
+}
+
+[ui~="d-inline-block"] {
+    display: inline-block !important;
+}
+
+[ui~="d-flex"] {
+    display: flex !important;
+}
+
+[ui~="d-inline-flex"] {
+    display: inline-flex !important;
+}
+
+[ui~="d-grid"] {
+    display: grid !important;
+}
+
+// Flex direction
+[ui~="flex-row"] {
+    flex-direction: row !important;
+}
+
+[ui~="flex-col"] {
+    flex-direction: column !important;
+}
+
+[ui~="flex-row-rev"] {
+    flex-direction: row-reverse !important;
+}
+
+[ui~="flex-col-rev"] {
+    flex-direction: column-reverse !important;
+}
+
+// Flex wrap
+[ui~="flex-wrap"] {
+    flex-wrap: wrap !important;
+}
+
+[ui~="flex-nowrap"] {
+    flex-wrap: nowrap !important;
+}
+
+[ui~="flex-wrap-rev"] {
+    flex-wrap: wrap-reverse !important;
+}
+
+// Justify content
+[ui~="justify-start"] {
+    justify-content: flex-start !important;
+}
+
+[ui~="justify-center"] {
+    justify-content: center !important;
+}
+
+[ui~="justify-end"] {
+    justify-content: flex-end !important;
+}
+
+[ui~="justify-between"] {
+    justify-content: space-between !important;
+}
+
+[ui~="justify-around"] {
+    justify-content: space-around !important;
+}
+
+[ui~="justify-evenly"] {
+    justify-content: space-evenly !important;
+}
+
+// Align items
+[ui~="items-start"] {
+    align-items: flex-start !important;
+}
+
+[ui~="items-center"] {
+    align-items: center !important;
+}
+
+[ui~="items-end"] {
+    align-items: flex-end !important;
+}
+
+[ui~="items-stretch"] {
+    align-items: stretch !important;
+}
+
+[ui~="items-baseline"] {
+    align-items: baseline !important;
+}
+
+// Align self
+[ui~="self-start"] {
+    align-self: flex-start !important;
+}
+
+[ui~="self-center"] {
+    align-self: center !important;
+}
+
+[ui~="self-end"] {
+    align-self: flex-end !important;
+}
+
+[ui~="self-stretch"] {
+    align-self: stretch !important;
+}
+
+// Flex grow / shrink
+[ui~="flex-1"] {
+    flex: 1 1 0% !important;
+}
+
+[ui~="flex-auto"] {
+    flex: 1 1 auto !important;
+}
+
+[ui~="flex-none"] {
+    flex: none !important;
+}
+
+[ui~="grow"] {
+    flex-grow: 1 !important;
+}
+
+[ui~="grow-0"] {
+    flex-grow: 0 !important;
+}
+
+[ui~="shrink"] {
+    flex-shrink: 1 !important;
+}
+
+[ui~="shrink-0"] {
+    flex-shrink: 0 !important;
+}
+
+// Order
+[ui~="order-first"] {
+    order: -9999 !important;
+}
+
+[ui~="order-last"] {
+    order: 9999 !important;
+}
+
+[ui~="order-none"] {
+    order: 0 !important;
+}
+
+@for $i from 1 through 5 {
+    [ui~="order-#{$i}"] {
+        order: $i !important;
+    }
+}
+
+// Gap
+@each $key, $val in $scar-spacers {
+    [ui~="gap-#{$key}"] {
+        gap: $val !important;
+    }
+
+    [ui~="gap-x-#{$key}"] {
+        column-gap: $val !important;
+    }
+
+    [ui~="gap-y-#{$key}"] {
+        row-gap: $val !important;
+    }
+}
+
+// Grid columns
+@for $i from 1 through 12 {
+    [ui~="grid-cols-#{$i}"] {
+        display: grid !important;
+        grid-template-columns: repeat(#{$i}, minmax(0, 1fr)) !important;
+    }
+}
+
+// Grid span
+@for $i from 1 through 12 {
+    [ui~="col-span-#{$i}"] {
+        grid-column: span #{$i} / span #{$i} !important;
+    }
+}
+
+[ui~="col-span-full"] {
+    grid-column: 1 / -1 !important;
+}
+
+// Place utilities
+[ui~="place-center"] {
+    display: grid !important;
+    place-items: center !important;
+}

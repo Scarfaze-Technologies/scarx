@@ -1,0 +1,145 @@
+// ============================================
+// ScarX Text Utilities (ui attribute)
+// ============================================
+
+// Text sizes
+@each $name, $size in $scar-font-sizes {
+    [ui~="text-#{$name}"] {
+        font-size: $size !important;
+    }
+}
+
+// Font weights
+[ui~="font-light"] {
+    font-weight: $scar-font-weight-light !important;
+}
+
+[ui~="font-normal"] {
+    font-weight: $scar-font-weight-normal !important;
+}
+
+[ui~="font-medium"] {
+    font-weight: $scar-font-weight-medium !important;
+}
+
+[ui~="font-semibold"] {
+    font-weight: $scar-font-weight-semibold !important;
+}
+
+[ui~="font-bold"] {
+    font-weight: $scar-font-weight-bold !important;
+}
+
+[ui~="font-black"] {
+    font-weight: $scar-font-weight-black !important;
+}
+
+// Text alignment
+[ui~="text-left"] {
+    text-align: left !important;
+}
+
+[ui~="text-center"] {
+    text-align: center !important;
+}
+
+[ui~="text-right"] {
+    text-align: right !important;
+}
+
+[ui~="text-justify"] {
+    text-align: justify !important;
+}
+
+// Text transform
+[ui~="text-uppercase"] {
+    text-transform: uppercase !important;
+}
+
+[ui~="text-lowercase"] {
+    text-transform: lowercase !important;
+}
+
+[ui~="text-capitalize"] {
+    text-transform: capitalize !important;
+}
+
+[ui~="text-normal-case"] {
+    text-transform: none !important;
+}
+
+// Text decoration
+[ui~="underline"] {
+    text-decoration: underline !important;
+}
+
+[ui~="line-through"] {
+    text-decoration: line-through !important;
+}
+
+[ui~="no-underline"] {
+    text-decoration: none !important;
+}
+
+// Text wrapping
+[ui~="text-wrap"] {
+    white-space: normal !important;
+}
+
+[ui~="text-nowrap"] {
+    white-space: nowrap !important;
+}
+
+[ui~="text-truncate"] {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+// Line height
+[ui~="leading-none"] {
+    line-height: 1 !important;
+}
+
+[ui~="leading-tight"] {
+    line-height: $scar-line-height-sm !important;
+}
+
+[ui~="leading-normal"] {
+    line-height: $scar-line-height !important;
+}
+
+[ui~="leading-loose"] {
+    line-height: $scar-line-height-lg !important;
+}
+
+// Letter spacing
+[ui~="tracking-tight"] {
+    letter-spacing: -0.025em !important;
+}
+
+[ui~="tracking-normal"] {
+    letter-spacing: 0 !important;
+}
+
+[ui~="tracking-wide"] {
+    letter-spacing: 0.05em !important;
+}
+
+[ui~="tracking-wider"] {
+    letter-spacing: 0.1em !important;
+}
+
+// Font family
+[ui~="font-sans"] {
+    font-family: $scar-font-family !important;
+}
+
+[ui~="font-mono"] {
+    font-family: $scar-font-family-mono !important;
+}
+
+// Text color (theme-aware)
+[ui~="text-muted"] {
+    color: var(--scar-text-muted) !important;
+}

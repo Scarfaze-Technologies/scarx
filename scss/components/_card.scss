@@ -1,0 +1,111 @@
+// ============================================
+// ScarX Card Component
+// ============================================
+
+.card {
+    background: var(--scar-surface-color);
+    border: 1px solid var(--scar-border-color);
+    border-radius: $scar-radius-lg;
+    padding: map-get($scar-spacers, 4);
+    @include scar-transition(all);
+
+    &:hover {
+        // Subtle lift on hover for interactive cards
+    }
+}
+
+// ---- Variants ----
+.card-modern {
+    @extend .card;
+    border: 1px solid rgba($scar-gray-200, 0.5);
+    @include scar-shadow("md");
+
+    &:hover {
+        @include scar-shadow("lg");
+        transform: translateY(-2px);
+    }
+}
+
+.card-glass {
+    @extend .card;
+    @include scar-glass(16px, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    [data-theme="dark"] & {
+        @include scar-glass-dark(16px, 0.25);
+    }
+}
+
+.card-flat {
+    @extend .card;
+    border: none;
+    background: var(--scar-bg-color);
+    box-shadow: none;
+}
+
+.card-hover {
+    @extend .card;
+    cursor: pointer;
+
+    &:hover {
+        @include scar-shadow("lg");
+        transform: translateY(-4px);
+        border-color: $scar-primary;
+    }
+}
+
+.card-bordered {
+    @extend .card;
+    border: 2px solid var(--scar-border-color);
+}
+
+// ---- Card Children ----
+.card-header {
+    padding-bottom: map-get($scar-spacers, 3);
+    margin-bottom: map-get($scar-spacers, 3);
+    border-bottom: 1px solid var(--scar-border-color);
+}
+
+.card-body {
+    flex: 1;
+}
+
+.card-footer {
+    padding-top: map-get($scar-spacers, 3);
+    margin-top: map-get($scar-spacers, 3);
+    border-top: 1px solid var(--scar-border-color);
+}
+
+.card-text {
+    font-size: $scar-font-size-lg;
+    font-weight: $scar-font-weight-semibold;
+    color: var(--scar-text-color);
+    margin-bottom: map-get($scar-spacers, 2);
+}
+
+.card-summary {
+    font-size: $scar-font-size-base;
+    color: var(--scar-text-muted);
+    line-height: $scar-line-height;
+}
+
+.card-image {
+    width: 100%;
+    border-radius: $scar-radius-md;
+    margin-bottom: map-get($scar-spacers, 3);
+    object-fit: cover;
+}
+
+.card-image-top {
+    width: calc(100% + map-get($scar-spacers, 4) * 2);
+    margin: calc(-1 * map-get($scar-spacers, 4)) calc(-1 * map-get($scar-spacers, 4)) map-get($scar-spacers, 3);
+    border-radius: $scar-radius-lg $scar-radius-lg 0 0;
+    object-fit: cover;
+}
+
+// ---- Card Group ----
+.card-group {
+    display: grid;
+    gap: map-get($scar-spacers, 3);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
